@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+{{teams}}
+<h1>NFL TEAMS</h1>
+<table>
+  <thead>
+    <tr>
+      <td>Home Team</td>
+      <td>Away Team</td>
+      <td>Week</td>
+    </tr>
+  </thead>
+  {% for element in teams %}
+  <tr>
+    <td>{{element['home']}}</td>
+    <td>{{element['away_team']}}</td>
+    <td>{{element['week']}}</td>
+  </tr>
+  {% endfor %}
+  <a href = '/teams'>List of Teams</a>
+</table>
+</body>
+</html>

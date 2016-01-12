@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+{{teams}}
+{% for team in teams %}
+<p>{{team['team_name']}}</p>
+<p>{{team['team_mascot']}}</p>
+<a href = "/teams/{{team['id']}}/edit"><button>Edit</button></a>
+<form action = "/teams/{{team['id']}}/delete" method = "post">
+  <input type = "submit" value = "delete">
+</form>
+{% endfor %}
+</body>
+</html>
